@@ -1,5 +1,5 @@
 # Blog_application_django
-A Blog application developed using Django framework 3.1. See live at: https://blog-app-pydj.herokuapp.com/
+A Blog application developed using Django framework 3.1.
 
 ### Features:
 - User Authentication - Users can register, login and logout
@@ -29,21 +29,3 @@ python manage.py createsuperuser
 ```
 python manage.py test
 ```
-
-### Blog Application API Endpoints
-
-- GET ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/users``` - Returns the list of all users registered.
-
-#### Blogposts API Endpoints
-- GET ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/posts``` - Returns the list of all posts by all users.
-- POST ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/posts``` - Creates a new post. 
-    > Data required = ```{"title": "Title", "description": "Description", "author": "Author ID"}```
-- GET ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/posts/<id>``` - Returns a post by it's post ID.
-- PUT ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/posts/<id>``` - Updates a post by it's post ID.
-- DELETE ```https://blog-app-pydj.herokuapp.com/api/v1/viewset/posts/<id>``` - Deletes a post by it's post ID.
-- GET ```https://blog-app-pydj.herokuapp.com/api/v1/posts/?username=<username>``` - Returns a list of all posts by a specific user by his username.
-
-
-#### API Documentation - https://documenter.getpostman.com/view/18647792/UVJhDuVC
-
-#### This will be updated regularly....
