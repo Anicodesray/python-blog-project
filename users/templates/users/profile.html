@@ -1,0 +1,23 @@
+{% extends "blogs/base.html" %}
+{% block content %}
+<div class="content-section">
+    <div class="profile_pane border flex">
+        <img class="rounded-circle border" src="{{ user.profile.profile_pic.url }}" alt="profile_image" height="120px"
+            width="120px">
+        <div style="margin: 12px;">
+            <h2>{{ user.username }}</h2>
+            <small>{{ user.email }}</small>
+            <br>
+            <a href="{% url 'update_profile' %}"><small>Edit Profile</small></a>
+        </div>
+    </div>
+    <div class="posts_container border">
+        <h5>Posts</h5>
+        <ul class="list-group list-group-flush">
+            {% for blog in user_blogs %}
+            <li><a href="{% url 'view_post' blog.pk %}">{{ blog.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

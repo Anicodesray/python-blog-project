@@ -1,0 +1,18 @@
+{% extends "blogs/base.html" %}
+{% block content %}
+<div class="search_section content-section">
+    <h4>Search Results</h4>
+
+    <ul id="searchResults" style="list-style-type: none; margin: 1rem auto;">
+        {% for item in results %}
+        <li>
+            <div class="card mt-2 p-2" style="align-items: flex-start"><a href="{% url 'profile' item.user %}">
+                    <img class="rounded-circle round_profile_pics mr-2" src="{{ item.profile_pic }}">{{ item.user }}
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}
